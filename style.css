@@ -1,0 +1,15 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: center;
+}
+
+#adddiv{
+    display: none;
+}
+
+embed{
+    width: 99vw;
+    height: 90vh;
+}

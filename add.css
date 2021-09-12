@@ -1,0 +1,12 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.loading_img{
+    width: 3em;
+    margin: auto;
+}
+embed{
+    width: 99vw;
+    height: 50vh;
+}

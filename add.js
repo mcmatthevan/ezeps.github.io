@@ -1,0 +1,56 @@
+function $_GET(param) {
+	var vars = {};
+	window.location.href.replace( location.hash, '' ).replace( 
+		/[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+		function( m, key, value ) { // callback
+			vars[key] = value !== undefined ? value : '';
+		}
+	);
+
+	if ( param ) {
+		return vars[param] ? vars[param] : null;	
+	}
+	return vars;
+}
+$(function(){
+    var current = 0;
+    var cord;
+    $("button").click(function(){
+        if (current == 0){
+            current = -1
+            $("p").html("Détermination de la position, veuillez patienter... <img class='loading_img' src='https://media.giphy.com/media/sSgvbe1m3n93G/giphy.gif' alt=''/>");
+            navigator.geolocation.getCurrentPosition(function(pos){
+                cord = pos.coords;
+                $("p").html("Confirmez la position en cliquant sur OK.");
+                $("p").after("<embed src=\""+IP+"/visualize?posX="+cord.latitude+"&posY="+cord.longitude+"&pattern="+$_GET("pattern")+"\"></embed>");
+                current = 1;
+            },function(){
+                $("p").html("Une erreur est survenue.");
+            },{
+                enableHighAccuracy: true
+            });
+        } else if (current == 1){
+            let pattern = $_GET("pattern").split(",");
+            for (let i = 0 ; i < pattern.length ; i++){
+                pattern[i] = parseInt(pattern[i]);
+            }
+            $("embed").remove();
+            $("p").html("Veuillez patienter... <img class='loading_img' src='https://media.giphy.com/media/sSgvbe1m3n93G/giphy.gif' alt=''/>");
+            $.ajax({
+                type: "POST",
+                url: IP+"/addpos",
+                data: {args:JSON.stringify({
+                    posX: cord.latitude,
+                    posY: cord.longitude,
+                    pattern: pattern
+                })},
+                dataType: "json",
+                success: function (response) {
+                    if (response === "OK"){
+                        location.href = "index.html";
+                    }
+                }
+            });
+        }
+    });
+});

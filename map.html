@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_21bf25f8d02c42f8bdad12e651ca27b2 {
+                #map_104d11b6501c4b59a08bf444279e6bcf {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -35,13 +35,13 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_21bf25f8d02c42f8bdad12e651ca27b2" ></div>
+            <div class="folium-map" id="map_104d11b6501c4b59a08bf444279e6bcf" ></div>
         
 </body>
 <script>    
     
-            var map_21bf25f8d02c42f8bdad12e651ca27b2 = L.map(
-                "map_21bf25f8d02c42f8bdad12e651ca27b2",
+            var map_104d11b6501c4b59a08bf444279e6bcf = L.map(
+                "map_104d11b6501c4b59a08bf444279e6bcf",
                 {
                     center: [48.584849, 7.697151],
                     crs: L.CRS.EPSG3857,
@@ -55,15 +55,29 @@
 
         
     
-            var tile_layer_1315e1c3b37740359c5db8f3d0b8ee35 = L.tileLayer(
+            var tile_layer_cb802293147341028174c5c47bd979a9 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 17, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_21bf25f8d02c42f8bdad12e651ca27b2);
+            ).addTo(map_104d11b6501c4b59a08bf444279e6bcf);
         
     
-            var tile_layer_36d7bcac7ac64170b10e7dbceaccc01b = L.tileLayer(
+            var tile_layer_c57fe604e5b14c00851aa7d87be5cc76 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {"attribution": "Esri", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 17, "noWrap": false, "opacity": 0.8, "subdomains": "abc", "tms": false}
-            ).addTo(map_21bf25f8d02c42f8bdad12e651ca27b2);
+            ).addTo(map_104d11b6501c4b59a08bf444279e6bcf);
+        
+    
+            var marker_e042857ff9ab4da0aaaf2d7b461a897f = L.marker(
+                [48.5872372, 7.740882],
+                {}
+            ).addTo(map_104d11b6501c4b59a08bf444279e6bcf);
+        
+    
+            marker_e042857ff9ab4da0aaaf2d7b461a897f.bindTooltip(
+                `<div>
+                     <table style='font-size: 2em; border-collapse: collapse; font-weight: bold;'><tr><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td></tr><tr><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>
+                 </div>`,
+                {"sticky": true}
+            );
         
 </script>

@@ -10,3 +10,7 @@ embed{
     width: 99vw;
     height: 50vh;
 }
+
+.method{
+    border: solid 1px grey;
+}

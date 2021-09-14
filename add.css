@@ -6,9 +6,9 @@ body{
     width: 3em;
     margin: auto;
 }
-embed{
+embed, iframe{
     width: 99vw;
-    height: 50vh;
+    height: 90vh;
 }
 
 .method{

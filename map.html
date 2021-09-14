@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_20dd0f067ff24f48818d795010694f2f {
+                #map_5f2f5f5915364e8a8d333e445788aefe {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -35,13 +35,13 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_20dd0f067ff24f48818d795010694f2f" ></div>
+            <div class="folium-map" id="map_5f2f5f5915364e8a8d333e445788aefe" ></div>
         
 </body>
 <script>    
     
-            var map_20dd0f067ff24f48818d795010694f2f = L.map(
-                "map_20dd0f067ff24f48818d795010694f2f",
+            var map_5f2f5f5915364e8a8d333e445788aefe = L.map(
+                "map_5f2f5f5915364e8a8d333e445788aefe",
                 {
                     center: [48.584849, 7.697151],
                     crs: L.CRS.EPSG3857,
@@ -55,15 +55,71 @@
 
         
     
-            var tile_layer_12a79691534f4b439f17d4138adeeb42 = L.tileLayer(
+            var tile_layer_4ee07ba0429249968924d719dc028140 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 17, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_20dd0f067ff24f48818d795010694f2f);
+            ).addTo(map_5f2f5f5915364e8a8d333e445788aefe);
         
     
-            var tile_layer_4f3dd12ddf454d48bd9b5b3db06c90bc = L.tileLayer(
+            var tile_layer_7d33501cb2274d8dae48bf620d3d1157 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {"attribution": "Esri", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 17, "noWrap": false, "opacity": 0.8, "subdomains": "abc", "tms": false}
-            ).addTo(map_20dd0f067ff24f48818d795010694f2f);
+            ).addTo(map_5f2f5f5915364e8a8d333e445788aefe);
+        
+    
+            var marker_78e4a55806ac4a8a89ea5bcd5e2bf09b = L.marker(
+                [48.58493463407014, 7.695992588996888],
+                {}
+            ).addTo(map_5f2f5f5915364e8a8d333e445788aefe);
+        
+    
+            marker_78e4a55806ac4a8a89ea5bcd5e2bf09b.bindTooltip(
+                `<div>
+                     <table style='font-size: 2em; border-collapse: collapse; font-weight: bold;'><tr><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td></tr><tr><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c83067adc0ab43b48e026c527456ae35 = L.marker(
+                [48.58457229908154, 7.6958667436429105],
+                {}
+            ).addTo(map_5f2f5f5915364e8a8d333e445788aefe);
+        
+    
+            marker_c83067adc0ab43b48e026c527456ae35.bindTooltip(
+                `<div>
+                     <table style='font-size: 2em; border-collapse: collapse; font-weight: bold;'><tr><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td></tr></table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f50b1d59a3e747a2bfd02bb512bfe02d = L.marker(
+                [48.58515205534844, 7.6961574244433],
+                {}
+            ).addTo(map_5f2f5f5915364e8a8d333e445788aefe);
+        
+    
+            marker_f50b1d59a3e747a2bfd02bb512bfe02d.bindTooltip(
+                `<div>
+                     <table style='font-size: 2em; border-collapse: collapse; font-weight: bold;'><tr><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td></tr><tr><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td></tr><tr><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td></tr></table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_83387b6110e14cbb875c932fb5f5a73b = L.marker(
+                [48.58506601568506, 7.696034037467144],
+                {}
+            ).addTo(map_5f2f5f5915364e8a8d333e445788aefe);
+        
+    
+            marker_83387b6110e14cbb875c932fb5f5a73b.bindTooltip(
+                `<div>
+                     <table style='font-size: 2em; border-collapse: collapse; font-weight: bold;'><tr><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td></tr><tr><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td></tr><tr><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td><td style='border: solid 1px rgb(215,215,215);'>&nbsp;&nbsp;·&nbsp;&nbsp;</td></tr></table>
+                 </div>`,
+                {"sticky": true}
+            );
         
 </script>

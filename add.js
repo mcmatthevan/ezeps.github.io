@@ -27,15 +27,15 @@ window.onmessage = function(ev){
             $("#method1").remove();
             current2 = -1;
             $("p").html("Cliquez pour déterminer la position.");
-            $("p").after("<iframe src='test.html?pattern="+ $_GET("pattern")+ "'></iframe>");
+            $("p").after("<embed src='test.html?pattern="+ $_GET("pattern")+ "'></embed>");
         } else if (current2 == 1){
             let pattern = $_GET("pattern").split(",");
             for (let i = 0 ; i < pattern.length ; i++){
                 pattern[i] = parseInt(pattern[i]);
             }
-            $("iframe").remove();
+            $("embed").remove();
             $("p").html("Veuillez patienter... <img class='loading_img' src='https://media.giphy.com/media/sSgvbe1m3n93G/giphy.gif' alt=''/>");
-            /posX=([0-9\.]+)&posY=([0-9\.]+)/.test($("iframe").attr("src"));
+            /posX=([0-9\.]+)&posY=([0-9\.]+)/.test($("embed").attr("src"));
             $.ajax({
                 type: "POST",
                 url: IP+"/addpos",
@@ -61,7 +61,7 @@ window.onmessage = function(ev){
             navigator.geolocation.getCurrentPosition(function(pos){
                 cord = pos.coords;
                 $("p").html("Confirmez la position en cliquant sur OK.");
-                $("p").after("<iframe src=\""+IP+"/visualize?posX="+cord.latitude+"&posY="+cord.longitude+"&pattern="+$_GET("pattern")+"\"></iframe>");
+                $("p").after("<embed src=\""+IP+"/visualize?posX="+cord.latitude+"&posY="+cord.longitude+"&pattern="+$_GET("pattern")+"\"></embed>");
                 current1 = 1;
             },function(){
                 $("p").html("Une erreur est survenue.");
@@ -73,7 +73,7 @@ window.onmessage = function(ev){
             for (let i = 0 ; i < pattern.length ; i++){
                 pattern[i] = parseInt(pattern[i]);
             }
-            $("iframe").remove();
+            $("embed").remove();
             $("p").html("Veuillez patienter... <img class='loading_img' src='https://media.giphy.com/media/sSgvbe1m3n93G/giphy.gif' alt=''/>");
             $.ajax({
                 type: "POST",
